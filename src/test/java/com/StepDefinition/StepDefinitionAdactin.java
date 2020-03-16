@@ -1,5 +1,6 @@
 package com.StepDefinition;
 
+
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -14,7 +15,6 @@ import com.repository.SearchHotel;
 import com.repository.SelectHotel;
 import com.resource.AdactinBase;
 
-import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -123,6 +123,25 @@ public class StepDefinitionAdactin extends AdactinBase {
 		Alert a = AdactinHook.driver.switchTo().alert();
 		a.accept();
 		click(bi.getBtnLogout());
+		
+	    
+	}
+	@When("Enter Username and Password")
+	public void enter_Username_and_Password() throws IOException {
+		launch("https://adactin.com/HotelApp/index.php");
+		AdactinHook.driver.manage().window().maximize();
+		type(l.getUname(),readValueFromExcel().get(1).get("Name"));
+		type(l.getPword(),readValueFromExcel().get(2).get("Pass"));
+		
+		
+		
+		
+	    
+	}
+
+	@Then("Login into site successfully")
+	public void login_into_site_successfully() {
+		System.out.println("success excel");
 	    
 	}
 

@@ -16,4 +16,10 @@ Feature: Title of your feature
     |naveen|Tippa|Moriganipalli 22-934, shanti Nilayam|4253762398763456|VISA|August|2022|123|
     And Check my itinerary
     Then Take screenshot of booking and logout
+    
+	@tag3
+	Scenario: Login using Excel
+		Given:Launch the adactin Site
+		When Enter Username and Password
+		Then Login into site successfully
 

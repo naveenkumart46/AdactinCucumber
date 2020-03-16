@@ -11,7 +11,7 @@ public class AdactinHook {
 	public static WebDriver driver;
 	@Before 
 	public void beforescenario(){
-		System.setProperty("webdriver.chrome.driver", "C:\\Selenium\\Adactin_Cucumber\\driver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Selenium\\Adactin_Cucumber\\Driver_Latest\\chromedriver.exe");
 		driver=new ChromeDriver();
 		
 		
